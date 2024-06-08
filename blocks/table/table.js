@@ -67,21 +67,21 @@ export default async function decorate(block) {
     parientDiv.classList.add('contries-block');
 
     if (countries) {
-        parientDiv.append(await createSelectMap(countries.href));
+        // parientDiv.append(await createSelectMap(countries.href));
         parientDiv.append(await createTable(countries.href,null));
         countries.replaceWith(parientDiv);
         
     }
-    const dropdown=document.getElementById('region');
-      dropdown.addEventListener('change', () => {
-        let url=countries.href;
-        if(dropdown.value!='all'){
-            url=countries.href+"?sheet="+dropdown.value;
-        }
-        const tableE=parientDiv.querySelector(":scope > table");
-        let promise = Promise.resolve(createTable(url,dropdown.value));
-        promise.then(function (val) {
-            tableE.replaceWith(val);
-        });
-      });
+    // const dropdown=document.getElementById('region');
+    //   dropdown.addEventListener('change', () => {
+    //     let url=countries.href;
+    //     if(dropdown.value!='all'){
+    //         url=countries.href+"?sheet="+dropdown.value;
+    //     }
+    //     const tableE=parientDiv.querySelector(":scope > table");
+    //     let promise = Promise.resolve(createTable(url,dropdown.value));
+    //     promise.then(function (val) {
+    //         tableE.replaceWith(val);
+    //     });
+    //   });
   }
