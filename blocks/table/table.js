@@ -10,7 +10,7 @@ async function createTableRow(table,row,i){
     let tr=document.createElement("tr");
     let sno=document.createElement("td");sno.appendChild(document.createTextNode(i));
     let conuntry=document.createElement("td");conuntry.appendChild(document.createTextNode(row.Country));
-    let continent=document.createElement("td");continent.appendChild(document.createTextNode(row.Capital));
+    let capital=document.createElement("td");continent.appendChild(document.createTextNode(row.Capital));
     tr.append(sno);tr.append(conuntry);tr.append(capital);
     table.append(tr);
 }
